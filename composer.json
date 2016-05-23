@@ -1,0 +1,16 @@
+{
+    "name": "kameli/nummerplade-api",
+    "description": "A simple package to access http://www.nummerpladeapi.dk (Requires subscription)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Bøndergaard",
+            "email": "danielboendergaard@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kameli\\NummerpladeApi\\": "/"
+        }
+    }
+}
