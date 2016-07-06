@@ -4,6 +4,10 @@ This is a simple library to demonstrate how to use our API.
 
 Find more information on http://www.nummerpladeapi.dk
 
+### Installation
+
+`composer require kameli/nummerplade-api`
+
 ### Example
 ````php
 $client = new Kameli\NummerpladeApi\Client('API_TOKEN');
