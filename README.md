@@ -6,7 +6,7 @@ Find more information on http://www.nummerpladeapi.dk
 
 ### Example
 ````php
-$client = new Kameli\NummerpladeApi\Client('API_CLIENT');
+$client = new Kameli\NummerpladeApi\Client('API_TOKEN');
 
 $vehicle = $client->vehicleByRegistration('REGISTRATION');
 // $vehicle = $client->vehicleByVin('VIN');
