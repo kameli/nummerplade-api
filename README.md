@@ -4,6 +4,8 @@ This is a simple library to demonstrate how to use our API.
 
 Find more information on http://www.nummerpladeapi.dk
 
+If you have any non-code related questions, please send us an e-mail at info@kameli.dk
+
 ### Installation
 
 `composer require kameli/nummerplade-api`
