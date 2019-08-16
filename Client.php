@@ -72,6 +72,16 @@ class Client
     }
 
     /**
+     * @param string $input
+     * @return object
+     * @throws \Exception
+     */
+    public function emissions($input)
+    {
+        return $this->request('emissions/' . $input);
+    }
+
+    /**
      * @param string $endpoint
      * @param array $parameters
      * @return object
