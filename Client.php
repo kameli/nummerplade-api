@@ -3,6 +3,7 @@
 namespace Kameli\NummerpladeApi;
 
 use Exception;
+use Kameli\NummerpladeApi\Exceptions\NotFoundException;
 
 class Client
 {
@@ -114,6 +115,8 @@ class Client
 
         if ($response_code === 200) {
             return $response->data;
+        } elseif ($response_code === 404) {
+            throw new NotFoundException($response->message, $response->status_code);
         } else {
             throw new Exception($response->message, $response->status_code);
         }
