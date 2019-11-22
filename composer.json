@@ -12,5 +12,9 @@
         "psr-4": {
             "Kameli\\NummerpladeApi\\": "/"
         }
-    }
+    },
+  "require": {
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
 }
