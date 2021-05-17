@@ -12,12 +12,38 @@ class Client
     /** @var string */
     protected $apiToken;
 
+    /** @var int */
+    protected $timeout = 8;
+
     /**
      * @param string $apiToken
      */
     public function __construct($apiToken)
     {
         $this->apiToken = $apiToken;
+    }
+
+    /**
+     * @param int $timeout
+     * @return Client
+     */
+    public function setTimeout($timeout)
+    {
+        $this->timeout = (int) $timeout;
+
+        return $this;
+    }
+
+    /**
+     * @param int $timeout
+     * @return Client
+     */
+    public function withTimeout($timeout)
+    {
+        $clone = clone $this;
+        $clone->setTimeout($timeout);
+
+        return $clone;
     }
 
     /**
@@ -96,7 +122,7 @@ class Client
             CURLOPT_URL => static::API_URL . $endpoint . '?' . $query,
             CURLOPT_HEADER => true,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 8
+            CURLOPT_TIMEOUT => $this->timeout,
         ]);
 
         if (! $result = curl_exec($ch)) {
