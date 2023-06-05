@@ -79,6 +79,26 @@ class Client
     }
 
     /**
+     * @param string $registration
+     * @return object
+     * @throws \Exception
+     */
+    public function dmrByRegistration($registration)
+    {
+        return $this->request('dmr/registration/' . $registration);
+    }
+
+    /**
+     * @param string $vin
+     * @return object
+     * @throws \Exception
+     */
+    public function dmrByVin($vin)
+    {
+        return $this->request('dmr/vin/' . $vin);
+    }
+
+    /**
      * @param string $vehicle_id
      * @return object
      * @throws \Exception
